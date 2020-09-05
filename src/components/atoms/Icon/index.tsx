@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
 import { customModifier } from '../../../functions';
-type icon =
+export type icon =
     | 'checkbox'
     | 'checkbox-active'
     | 'user'
