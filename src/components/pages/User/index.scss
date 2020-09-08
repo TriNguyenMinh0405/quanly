@@ -1,0 +1,14 @@
+.p-user {
+    margin-top: 20px;
+    display: flex;
+    &_left {
+        flex: 0 0 25%;
+        width: 25%;
+        padding-right: 15px;
+    }
+    &_right {
+        flex: 0 0 75%;
+        width: 75%;
+        padding-left: 15px;
+    }
+}

@@ -1,0 +1,16 @@
+.o-dashboardnav {
+    padding: 16.5px 20px;
+    background: white;
+    border-radius: 20px;
+    min-height: 70vh;
+    height: 100%;
+    position: relative;
+    &_header {
+        border-bottom: 1px solid #ebf2f7;
+        padding-bottom: 14px;
+    }
+    &_logout {
+        position: absolute;
+        bottom: 26px;
+    }
+}

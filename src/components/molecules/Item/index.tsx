@@ -8,13 +8,31 @@ import Text from '../../atoms/Text';
 interface ItemProps {
     isImg?: string;
     icon?: icon;
+    admin?: boolean;
+    cursor?: 'cursor';
+    hanldeClick?: () => void;
 }
-const Item: React.FC<ItemProps> = ({ isImg, icon, children }) => {
+const Item: React.FC<ItemProps> = ({
+    isImg,
+    icon,
+    children,
+    admin,
+    cursor,
+    hanldeClick,
+}) => {
     return (
-        <div className={customModifier('m-item')}>
+        <div
+            onClick={hanldeClick}
+            className={customModifier('m-item', cursor!)}
+        >
             {isImg ? <Img src={isImg} /> : ''}
             {icon ? <Icon modifier={icon} /> : ''}
-            <Text size={isImg ? 'fs14' : 'fs16'}>{children}</Text>
+            {!admin && <Text size={isImg ? 'fs14' : 'fs16'}>{children}</Text>}
+            {admin && (
+                <Text weight="bold" size="fs18">
+                    {children}
+                </Text>
+            )}
         </div>
     );
 };

@@ -6,10 +6,16 @@ import Item from '../Item';
 interface ItemMenuProps {
     to: string;
     icon: icon;
+    handleClick?: () => void;
 }
-const ItemMenu: React.FC<ItemMenuProps> = ({ to, icon, children }) => {
+const ItemMenu: React.FC<ItemMenuProps> = ({
+    to,
+    icon,
+    children,
+    handleClick,
+}) => {
     return (
-        <Link to={to} className="m-itemmenu">
+        <Link onClick={handleClick} to={to} className="m-itemmenu">
             <Item icon={icon}>{children}</Item>
         </Link>
     );
