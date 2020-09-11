@@ -1,0 +1,23 @@
+.m-infomenu {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    .a-iconbutton {
+        margin-left: 45px;
+        &:last-child {
+            margin-left: 35px;
+        }
+    }
+    .m-hoveritem {
+        .a-iconbutton {
+            justify-content: flex-end;
+            height: 90px;
+        }
+    }
+    .a-text {
+        margin-left: 24px;
+    }
+    .a-img {
+        margin-left: 45px;
+    }
+}

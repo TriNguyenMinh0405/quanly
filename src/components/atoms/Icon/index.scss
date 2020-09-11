@@ -2,7 +2,18 @@
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: green;
+    &-notifi-home {
+        background: url(~assets/icons/notifi.svg) no-repeat center center;
+    }
+    &-search-home {
+        background: url(~assets/icons/search.svg) no-repeat center center;
+    }
+    &-plush-home {
+        background: url(~assets/icons/plush.svg) no-repeat center center;
+    }
+    &-chevron-down-home {
+        background: url(~assets/icons/chevron-down.svg) no-repeat center center;
+    }
     &-checkbox {
         background: url(../../../assets/icon-checkbox.svg) no-repeat center
             center;

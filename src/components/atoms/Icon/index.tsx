@@ -12,7 +12,11 @@ export type icon =
     | 'notifications'
     | 'dashboard'
     | 'dashboard-active'
-    | 'info';
+    | 'info'
+    | 'notifi-home'
+    | 'search-home'
+    | 'plush-home'
+    | 'chevron-down-home';
 
 interface IconProps {
     modifier: icon;

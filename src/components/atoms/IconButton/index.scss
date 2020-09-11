@@ -7,4 +7,8 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    &-icon-home {
+        border-radius: none;
+        background: transparent;
+    }
 }

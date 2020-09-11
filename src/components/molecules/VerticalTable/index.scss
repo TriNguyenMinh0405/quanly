@@ -1,0 +1,19 @@
+.m-verticaltable {
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &_td {
+        display: block;
+        width: 25%;
+        text-align: left;
+        &:first-child {
+            width: 20%;
+        }
+        &:last-child {
+            width: 30%;
+            text-align: right;
+        }
+    }
+}
