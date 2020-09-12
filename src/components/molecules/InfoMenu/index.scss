@@ -4,20 +4,41 @@
     align-items: center;
     .a-iconbutton {
         margin-left: 45px;
+        @include large-tablet {
+            margin-left: 20px;
+        }
+        @include small-tablet {
+            display: none;
+        }
         &:last-child {
             margin-left: 35px;
+            @include large-tablet {
+                margin-left: 10px;
+            }
         }
     }
     .m-hoveritem {
         .a-iconbutton {
             justify-content: flex-end;
             height: 90px;
+            @include large-tablet {
+                margin-left: 5px;
+            }
         }
     }
     .a-text {
         margin-left: 24px;
+        @include large-tablet {
+            margin-left: 20px;
+        }
+        @include small-tablet {
+            display: none;
+        }
     }
     .a-img {
         margin-left: 45px;
+        @include large-tablet {
+            margin-left: 20px;
+        }
     }
 }

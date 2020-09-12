@@ -1,2 +1,8 @@
 @import './scss/variable.scss';
 @import './scss/grid.scss';
+// Molecules
+@import './components/molecules/ListMenu';
+@import './components/molecules/InfoMenu';
+@import './components/molecules/IconIput';
+// Organisms
+@import './components/organisms/HeaderHome';

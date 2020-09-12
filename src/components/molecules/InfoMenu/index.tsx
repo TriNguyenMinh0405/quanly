@@ -1,6 +1,5 @@
 import React from 'react';
 import { customModifier } from 'functions';
-import './index.scss';
 import IconButton from 'components/atoms/IconButton';
 import Img from 'components/atoms/Img';
 import Text from 'components/atoms/Text';

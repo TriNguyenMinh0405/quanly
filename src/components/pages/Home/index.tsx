@@ -1,7 +1,6 @@
 import React from 'react';
 import { customModifier } from 'functions';
 import './index.scss';
-import HeaderHome from 'components/organisms/HeaderHome';
 export interface HomeProps {}
 const Home: React.FC<HomeProps> = (props) => {
     return (
@@ -9,7 +8,7 @@ const Home: React.FC<HomeProps> = (props) => {
             className={customModifier('p-home')}
             style={{ background: 'blue' }}
         >
-            <HeaderHome />
+            Home page
         </div>
     );
 };
