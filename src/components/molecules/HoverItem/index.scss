@@ -6,12 +6,13 @@
         margin: 0;
         position: absolute;
         right: 0;
+        top: 100%;
         background: #151f2e;
         transition: 0.3s ease-out;
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-100%);
-        z-index: -1;
+        height: 0;
+        z-index: 1;
         li {
             color: white;
             font-size: 18px;
@@ -27,7 +28,7 @@
         }
     }
     &:hover .m-hoveritem_dropdown {
-        transform: translateY(0%);
+        height: 135px;
         opacity: 1;
         visibility: visible;
     }

@@ -4,13 +4,19 @@ import { customModifier } from '../../../functions';
 
 interface ImgProps {
     src: string;
-    modifier?: 'img-home';
+    modifier?: 'img-home' | 'default';
 }
 const Img: React.FC<ImgProps> = ({ src, modifier }) => {
     return (
-        <span className={customModifier('a-img', modifier!)}>
-            <img src={src} alt={src} />
-        </span>
+        <React.Fragment>
+            {modifier === 'default' ? (
+                <img src={src} alt={src} className="a-img_default" />
+            ) : (
+                <span className={customModifier('a-img', modifier!)}>
+                    <img src={src} alt={src} />
+                </span>
+            )}
+        </React.Fragment>
     );
 };
 export default Img;
