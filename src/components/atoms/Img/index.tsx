@@ -10,7 +10,15 @@ const Img: React.FC<ImgProps> = ({ src, modifier }) => {
     return (
         <React.Fragment>
             {modifier === 'default' ? (
-                <img src={src} alt={src} className="a-img_default" />
+                <img
+                    onError={(e) => {
+                        e.currentTarget.src =
+                            'http://via.placeholder.com/200x300';
+                    }}
+                    src={src}
+                    alt={src}
+                    className="a-img_default"
+                />
             ) : (
                 <span className={customModifier('a-img', modifier!)}>
                     <img src={src} alt={src} />

@@ -1,0 +1,6 @@
+.o-moviecarousel {
+    margin-top: 85px;
+    @include large-tablet {
+        margin-top: 30px;
+    }
+}

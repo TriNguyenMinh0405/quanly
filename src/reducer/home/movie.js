@@ -6,8 +6,8 @@ const movie = (state = initState, action) => {
         case 'GET_LIST': {
             return { ...state };
         }
-        case 'GET_LIST_API': {
-            return { ...state, movie: action.data };
+        case 'GET_LIST_MOVIE': {
+            return { ...state, movie: action.payload };
         }
         default:
             return { ...state };

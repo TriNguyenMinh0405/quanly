@@ -1,8 +1,9 @@
 import React from 'react';
 import { customModifier } from 'functions';
 import './index.scss';
-import Carousel from 'components/molecules/Carousel';
 import { Container } from 'react-bootstrap';
+import MainCarousel from 'components/organisms/MainCarousel';
+import MovieCarousel from 'components/organisms/MovieCarousel';
 export interface HomeProps {}
 const Home: React.FC<HomeProps> = (props) => {
     return (
@@ -11,7 +12,8 @@ const Home: React.FC<HomeProps> = (props) => {
             style={{ background: '#040917' }}
         >
             <Container>
-                <Carousel />
+                <MainCarousel />
+                <MovieCarousel />
             </Container>
         </div>
     );

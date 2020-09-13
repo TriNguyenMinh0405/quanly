@@ -1,63 +1,72 @@
 import React from 'react';
 import { customModifier } from 'functions';
 import Slider from 'react-slick';
-import CardMain from '../CardMain';
-export interface CarouselProps {}
-const Carousel: React.FC<CarouselProps> = (props) => {
+export interface CarouselProps {
+    respon?: boolean;
+    slideShow?: number;
+    dots?: boolean;
+    timeSpeed?: number;
+}
+const Carousel: React.FC<CarouselProps> = ({
+    children,
+    respon,
+    slideShow,
+    dots,
+    timeSpeed,
+}) => {
     var settings = {
-        dots: true,
+        dots: dots,
         autoplay: true,
         infinite: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: timeSpeed ? timeSpeed : 10000,
         speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: slideShow ? slideShow : 1,
+        slidesToScroll: slideShow ? slideShow : 1,
         arrows: false,
         initialSlide: 0,
         customPaging: function (i) {
             return <span className="m-carousel_dots"></span>;
         },
         dotsClass: 'slick-dots',
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true,
-                },
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2,
-                },
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
+        responsive: respon
+            ? [
+                  {
+                      breakpoint: 1199,
+                      settings: {
+                          slidesToShow: 5,
+                          slidesToScroll: 5,
+                          infinite: true,
+                          dots: true,
+                      },
+                  },
+                  {
+                      breakpoint: 991,
+                      settings: {
+                          slidesToShow: 3,
+                          slidesToScroll: 3,
+                          initialSlide: 3,
+                      },
+                  },
+                  {
+                      breakpoint: 767,
+                      settings: {
+                          slidesToShow: 2,
+                          slidesToScroll: 2,
+                      },
+                  },
+                  {
+                      breakpoint: 600,
+                      settings: {
+                          slidesToShow: 2,
+                          slidesToScroll: 2,
+                      },
+                  },
+              ]
+            : null,
     };
     return (
         <div className={customModifier('m-carousel')}>
-            <Slider {...settings}>
-                <div className="m-carousel_child">
-                    <CardMain />
-                </div>
-                <div className="m-carousel_child">
-                    <CardMain />
-                </div>
-                <div className="m-carousel_child">
-                    <CardMain />
-                </div>
-            </Slider>
+            <Slider {...settings}>{children}</Slider>
         </div>
     );
 };
