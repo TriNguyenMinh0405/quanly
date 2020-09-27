@@ -1,0 +1,35 @@
+.m-hoveritem {
+    position: relative;
+    &_dropdown {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background: #151f2e;
+        transition: 0.3s ease-out;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        z-index: 1;
+        li {
+            color: white;
+            font-size: 18px;
+            padding: 20px 20px;
+            cursor: pointer;
+            border-bottom: 1px solid white;
+            &:last-child {
+                border-bottom: none;
+            }
+            &:hover {
+                color: #701486;
+            }
+        }
+    }
+    &:hover .m-hoveritem_dropdown {
+        height: 135px;
+        opacity: 1;
+        visibility: visible;
+    }
+}

@@ -1,0 +1,8 @@
+.m-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    &-cursor {
+        cursor: pointer;
+    }
+}

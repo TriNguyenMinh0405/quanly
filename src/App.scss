@@ -1,0 +1,15 @@
+@import './scss/variable.scss';
+@import './scss/grid.scss';
+// Atoms
+@import './components/atoms/Loading';
+// Molecules
+@import './components/molecules/ListMenu';
+@import './components/molecules/InfoMenu';
+@import './components/molecules/IconIput';
+@import './components/molecules/Carousel';
+@import './components/molecules/CardMain';
+@import './components/molecules/CardMovie';
+// Organisms
+@import './components/organisms/HeaderHome';
+@import './components/organisms/MainCarousel';
+@import './components/organisms/MovieCarousel';

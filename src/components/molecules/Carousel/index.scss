@@ -1,0 +1,17 @@
+.m-carousel_dots {
+    width: 10px;
+    height: 10px;
+    background: rgb(212, 211, 211);
+    display: inline-block;
+    border-radius: 50%;
+}
+.slick-active {
+    .m-carousel_dots {
+        background: black;
+        border: 1px solid white;
+    }
+}
+.slick-dots {
+    bottom: 20px !important;
+    text-align: center;
+}

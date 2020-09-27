@@ -1,0 +1,8 @@
+.o-header {
+    background: #eaf2ff;
+    padding-top: 30px;
+    &_content {
+        display: flex;
+        justify-content: space-between;
+    }
+}

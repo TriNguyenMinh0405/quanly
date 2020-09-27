@@ -1,0 +1,17 @@
+.m-logo {
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    background: #508ff4;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-logo-home {
+        height: 90px;
+        width: 121px;
+        display: inline-block;
+        border: none;
+        background: url(~assets/home/logo.png);
+    }
+}

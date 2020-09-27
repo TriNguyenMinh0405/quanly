@@ -1,0 +1,63 @@
+.o-headerhome {
+    background: $gray-deep;
+    height: 90px;
+    &_menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .m-iconinput {
+            @include large-tablet {
+                min-width: unset;
+                max-width: 250px;
+            }
+            @include small-tablet {
+                display: none;
+            }
+        }
+        .o-headerhome_iconbar {
+            @include small-tablet {
+                @include flex-align;
+            }
+            &-btn {
+                .a-iconbutton {
+                    display: none;
+                    @include small-tablet {
+                        display: inline-flex;
+                    }
+                }
+            }
+        }
+    }
+    &_mark {
+        position: fixed;
+        top: 90px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: #151f2ed2;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease-in;
+        z-index: 1;
+        &.active {
+            visibility: visible;
+            opacity: 1;
+            .o-headerhome_mark-list {
+                right: 0;
+            }
+        }
+        &-list {
+            position: absolute;
+            right: -300px;
+            height: 100%;
+            width: 400px;
+            transition: all 0.3s ease-in;
+            background: #151f2ecc;
+            z-index: 2;
+            @include small-moblie {
+                width: 70%;
+                right: -50%;
+            }
+        }
+    }
+}

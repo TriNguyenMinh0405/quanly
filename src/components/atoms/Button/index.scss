@@ -1,0 +1,35 @@
+.a-button {
+    color: white;
+    appearance: none;
+    outline: none;
+    border: 1px solid #30a4e8;
+    margin: 0 5px;
+    &-blue {
+        background-color: #225485;
+    }
+    &-red {
+        background-color: #c71c22;
+    }
+    &-sky {
+        background-color: #30a4e8;
+    }
+    &-origan {
+        background-color: #dd5700;
+    }
+    &-green {
+        background-color: #74a839;
+    }
+    &-pd10 {
+        padding: 10px;
+    }
+    &-pd5 {
+        padding: 2px;
+        font-size: 10px;
+    }
+    &-around {
+        border-radius: 5px;
+    }
+    &-cursor {
+        cursor: pointer;
+    }
+}

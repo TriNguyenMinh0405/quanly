@@ -1,0 +1,57 @@
+.a-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    &-notifi-home {
+        background: url(~assets/icons/notifi.svg) no-repeat center center;
+    }
+    &-search-home {
+        background: url(~assets/icons/search.svg) no-repeat center center;
+    }
+    &-plush-home {
+        background: url(~assets/icons/plush.svg) no-repeat center center;
+    }
+    &-chevron-down-home {
+        background: url(~assets/icons/chevron-down.svg) no-repeat center center;
+    }
+    &-checkbox {
+        background: url(../../../assets/icon-checkbox.svg) no-repeat center
+            center;
+    }
+    &-checkbox-active {
+        background: url(../../../assets/icon-checkbox-active.svg) no-repeat
+            center center;
+    }
+    &-dashboard {
+        background: url(../../../assets/icon-dashboard.svg) no-repeat center
+            center;
+    }
+    &-dashboard-active {
+        background: url(../../../assets/icon-dasboard-active.svg) no-repeat
+            center center;
+    }
+    &-profile {
+        background: url(../../../assets/icon-profile.svg) no-repeat center
+            center;
+    }
+    &-search {
+        background: url(../../../assets/icon-search.svg) no-repeat center center;
+    }
+    &-user {
+        background: url(../../../assets/icon-user.svg) no-repeat center center;
+    }
+    &-user-active {
+        background: url(../../../assets/icon-user-active.svg) no-repeat center
+            center;
+    }
+    &-logout {
+        background: url(../../../assets/icon-logout.svg) no-repeat center center;
+    }
+    &-info {
+        background: url(../../../assets/icon-info.svg) no-repeat center center;
+    }
+    &-notifications {
+        background: url(../../../assets/icon-notifications.svg) no-repeat center
+            center;
+    }
+}
