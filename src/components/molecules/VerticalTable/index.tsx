@@ -1,11 +1,21 @@
 import React from 'react';
 import './index.scss';
-const VerticalTable: React.FC = ({ children }) => {
+interface VarticalTableProps {
+    handleClickTd?: (arg?: number | string) => void;
+}
+const VerticalTable: React.FC<VarticalTableProps> = ({
+    children,
+    handleClickTd,
+}) => {
     return (
         <tr className="m-verticaltable">
             {React.Children.map(children, (item, index) => {
                 return (
-                    <td className="m-verticaltable_td" key={`item-${index}`}>
+                    <td
+                        onClick={() => handleClickTd && handleClickTd()}
+                        className="m-verticaltable_td"
+                        key={`item-${index}`}
+                    >
                         {item}
                     </td>
                 );

@@ -10,3 +10,9 @@ export const customModifier = (baseModifier: string, ...modifier: string[]) => {
     }
     return baseModifier;
 };
+export const setAdminLocalStorage = (userAdmin) => {
+    localStorage.setItem('UserAdmin', userAdmin);
+};
+export const getAdminLocalStorage = () => {
+    return localStorage.getItem('UserAdmin');
+};

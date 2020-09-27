@@ -7,7 +7,10 @@ interface ButtonProps {
     size?: 'pd10' | 'pd5';
     modifier?: 'around';
     cursor?: 'pointer';
-    handleClick?: () => void;
+    handleClick?: (
+        event?: React.MouseEvent<HTMLButtonElement>,
+        arg?: string | number
+    ) => void;
 }
 const Button: React.FC<ButtonProps> = ({
     children,
@@ -28,7 +31,10 @@ const Button: React.FC<ButtonProps> = ({
                 cursor!
             )}
             type={type}
-            onClick={handleClick}
+            onClick={(
+                event?: React.MouseEvent<HTMLButtonElement>,
+                arg?: string | number
+            ) => handleClick && handleClick(event, arg)}
         >
             {children}
         </button>

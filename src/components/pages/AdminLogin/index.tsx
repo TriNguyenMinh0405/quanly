@@ -6,7 +6,8 @@ import { useForm, FormProvider } from 'react-hook-form';
 import Loading from 'components/atoms/Loading';
 import { RootState } from 'reducer';
 import { Alert } from 'react-bootstrap';
-
+import { Redirect } from 'react-router-dom';
+import { getAdminLocalStorage } from 'functions';
 export interface AdminLoginProps {}
 const AdminLogin: React.FC<AdminLoginProps> = (props) => {
     const stateAdminLogin = useSelector((state: RootState) => state.loginAdmin);
@@ -17,8 +18,8 @@ const AdminLogin: React.FC<AdminLoginProps> = (props) => {
     };
     return (
         <FormProvider {...useForm()}>
+            {getAdminLocalStorage() && <Redirect to="/dashboard" />}
             {stateAdminLogin.loading && <Loading />}
-
             <div className="p-adminlogin">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {!stateAdminLogin.loading &&

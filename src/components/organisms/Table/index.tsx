@@ -6,7 +6,14 @@ import Text from 'components/atoms/Text';
 import Button from 'components/atoms/Button';
 import * as Actions from 'actions/admin/user';
 import { useDispatch, useSelector } from 'react-redux';
-const Table: React.FC = () => {
+interface TableProps {
+    eventClickTd?: (arg?: number | string) => void;
+    eventClickButton?: (
+        event?: React.MouseEvent<HTMLButtonElement>,
+        arg?: string | number
+    ) => void;
+}
+const Table: React.FC<TableProps> = ({ eventClickTd, eventClickButton }) => {
     const user = useSelector((state) => {
         return state;
     });
@@ -34,7 +41,12 @@ const Table: React.FC = () => {
             <tbody>
                 {['1', '2', '3', '4', '5', '6', '7'].map((item, index) => {
                     return (
-                        <VerticalTable key={index}>
+                        <VerticalTable
+                            handleClickTd={() =>
+                                eventClickTd && eventClickTd(index)
+                            }
+                            key={index}
+                        >
                             <Img src="https://i.ytimg.com/vi/XTgHqqbWEYI/maxresdefault.jpg" />
                             <Text>tien1234</Text>
                             <Text>Nguyen minh tien</Text>
@@ -43,6 +55,14 @@ const Table: React.FC = () => {
                                     modifier="around"
                                     background="sky"
                                     type="button"
+                                    handleClick={(
+                                        event?: React.MouseEvent<
+                                            HTMLButtonElement
+                                        >
+                                    ) =>
+                                        eventClickButton &&
+                                        eventClickButton(event, index)
+                                    }
                                 >
                                     Detail
                                 </Button>

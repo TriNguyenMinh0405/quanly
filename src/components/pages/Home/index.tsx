@@ -35,6 +35,24 @@ const Home: React.FC<HomeProps> = (props) => {
                     </form>
                 </FormProvider>
             </div>
+            <div
+                style={{
+                    width: '1200px',
+                    height: '500px',
+                    padding: '50px',
+                    background: 'green',
+                }}
+            >
+                <iframe
+                    // src="http://www.pdf995.com/samples/pdf.pdf"
+                    src="https://www.youtube.com/embed/l08q1Ib9RGo"
+                    style={{ border: 'none', width: '100%', height: '100%' }}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                >
+                    onerror
+                </iframe>
+            </div>
+
             {isLoading && <Loading />}
         </div>
     );
