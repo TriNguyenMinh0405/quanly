@@ -4,6 +4,10 @@ export type user = {
     password: string;
 };
 export const postLogin = async (param: user) => {
-    const httpPost = await http.post('users/login', param);
-    return httpPost.data;
+    try {
+        const httpPost = await http.post('users/login', param);
+        return httpPost.data;
+    } catch (error) {
+        throw error.response.data;
+    }
 };

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { customModifier } from 'functions';
 import './index.scss';
 import { Container } from 'react-bootstrap';
@@ -17,14 +17,6 @@ const Home: React.FC<HomeProps> = (props) => {
         dispatch(postLoginRequest(values));
     };
     const isLoading = useSelector((state: RootState) => state.login.isLoading);
-    const [windowWidth, updateWindowDimensions] = useState(window.innerWidth);
-
-    useEffect(() => {
-        window.addEventListener('resize', () => {
-            console.log(window.innerWidth);
-            updateWindowDimensions(window.innerWidth);
-        });
-    }, []);
     return (
         <div
             className={customModifier('p-home')}
