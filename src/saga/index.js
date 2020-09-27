@@ -1,5 +1,6 @@
-import { fork } from 'redux-saga/effects';
+import { all } from 'redux-saga/effects';
 import { watchAddProduct } from './movie';
+import { watchPostData } from './pages/login';
 export function* rootSaga() {
-    yield fork(watchAddProduct);
+    yield all([watchAddProduct(), watchPostData()]);
 }

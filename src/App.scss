@@ -1,5 +1,7 @@
 @import './scss/variable.scss';
 @import './scss/grid.scss';
+// Atoms
+@import './components/atoms/Loading';
 // Molecules
 @import './components/molecules/ListMenu';
 @import './components/molecules/InfoMenu';
