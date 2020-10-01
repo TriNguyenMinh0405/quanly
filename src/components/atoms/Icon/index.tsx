@@ -16,7 +16,8 @@ export type icon =
     | 'notifi-home'
     | 'search-home'
     | 'plush-home'
-    | 'chevron-down-home';
+    | 'chevron-down-home'
+    | 'cancel';
 
 interface IconProps {
     modifier: icon;

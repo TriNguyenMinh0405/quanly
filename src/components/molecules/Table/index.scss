@@ -1,0 +1,9 @@
+.m-table {
+    display: inline-block;
+    margin: auto;
+    background: white;
+    @media screen and (max-width: 576px) {
+        width: 90%;
+        display: block;
+    }
+}

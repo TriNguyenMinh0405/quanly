@@ -1,4 +1,5 @@
 import React from 'react';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import './scss/variable.scss';

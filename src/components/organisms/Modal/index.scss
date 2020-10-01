@@ -1,0 +1,16 @@
+.o-modal {
+    max-width: 1200px;
+    .modal-content {
+        background: transparent;
+        border: none;
+        .o-modal_content {
+            .a-iconbutton {
+                background: transparent;
+                position: absolute;
+                right: 50%;
+                bottom: -30px;
+                transform: translateX(50%);
+            }
+        }
+    }
+}
