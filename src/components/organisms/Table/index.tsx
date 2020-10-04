@@ -1,11 +1,9 @@
 import React from 'react';
-import './index.scss';
 import VerticalTable from 'components/molecules/VerticalTable';
 import Img from 'components/atoms/Img';
 import Text from 'components/atoms/Text';
 import Button from 'components/atoms/Button';
-import * as Actions from 'actions/admin/user';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 interface TableProps {
     eventClickTd?: (arg?: number | string) => void;
     eventClickButton?: (
@@ -17,17 +15,11 @@ const Table: React.FC<TableProps> = ({ eventClickTd, eventClickButton }) => {
     const user = useSelector((state) => {
         return state;
     });
-    const userDispatch = useDispatch();
     return (
         <table className="o-table">
             <thead>
                 <tr className="m-verticaltable">
-                    <th
-                        className="m-verticaltable_td"
-                        onClick={() => userDispatch(Actions.getListUserApi())}
-                    >
-                        Hình Ảnh
-                    </th>
+                    <th className="m-verticaltable_td">Hình Ảnh</th>
                     <th
                         onClick={() => console.log(user)}
                         className="m-verticaltable_td"

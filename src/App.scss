@@ -2,6 +2,7 @@
 @import './scss/grid.scss';
 // Atoms
 @import './components/atoms/Loading';
+@import './components/atoms/Input';
 // Molecules
 @import './components/molecules/ListMenu';
 @import './components/molecules/InfoMenu';
@@ -9,7 +10,6 @@
 @import './components/molecules/Carousel';
 @import './components/molecules/CardMain';
 @import './components/molecules/CardMovie';
-@import './components/molecules/Table';
 // Organisms
 @import './components/organisms/HeaderHome';
 @import './components/organisms/MainCarousel';
@@ -19,3 +19,4 @@
 @import './components/templates/LoginModal';
 //Pages
 @import './components/pages/AdminLogin';
+@import './components/pages/Home';

@@ -1,6 +1,13 @@
 .o-headerhome {
     background: $gray-deep;
     height: 90px;
+    @include small-moblie {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
     &_menu {
         display: flex;
         justify-content: space-between;

@@ -7,7 +7,9 @@ const HoverItem: React.FC<HoverItemProps> = ({ children }) => {
         <div className={customModifier('m-hoveritem')}>
             {children}
             <ul className="m-hoveritem_dropdown">
-                <li>Logout</li>
+                <li onClick={() => localStorage.removeItem('UserHome')}>
+                    Logout
+                </li>
                 <li>Infomation</li>
             </ul>
         </div>

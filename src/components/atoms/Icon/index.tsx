@@ -17,7 +17,8 @@ export type icon =
     | 'search-home'
     | 'plush-home'
     | 'chevron-down-home'
-    | 'cancel';
+    | 'cancel'
+    | 'nav';
 
 interface IconProps {
     modifier: icon;

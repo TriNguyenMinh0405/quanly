@@ -1,0 +1,19 @@
+.a-input {
+    width: 100%;
+    margin-bottom: 30px;
+    label {
+        display: block;
+        text-align: left;
+        color: white;
+        cursor: pointer;
+    }
+    .a-input_input {
+        width: 100%;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #ffff;
+        background: transparent;
+        color: #ffff;
+        height: 40px;
+    }
+}
