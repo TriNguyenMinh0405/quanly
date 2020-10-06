@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { customModifier } from 'functions';
 import ModalBootstrap from 'components/organisms/Modal';
 import Input from 'components/atoms/Input';

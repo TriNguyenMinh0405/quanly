@@ -16,7 +16,6 @@ const FaultComponent: React.FC = () => {
         }
     }, [infoUser]);
     useEffect(() => {
-        console.log('didmuont');
         console.log('slug:', slug);
         dispatch(loginHome({ email: 'test1@gmail.com', password: 'test1' }));
     }, []);
