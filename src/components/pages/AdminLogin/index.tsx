@@ -14,7 +14,11 @@ const AdminLogin: React.FC<AdminLoginProps> = (props) => {
     const dispatch = useDispatch();
     const { handleSubmit, register } = useForm();
     const onSubmit = (values: User) => {
-        dispatch(loginAdmin(values));
+        (async () => {
+            await dispatch(loginAdmin(values));
+            console.log(stateAdminLogin.error);
+            console.log('da submit');
+        })();
     };
     return (
         <FormProvider {...useForm()}>

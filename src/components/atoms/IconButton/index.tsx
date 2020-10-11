@@ -11,6 +11,7 @@ const IconButton: React.FC<IconButtonProps> = ({
     icon,
     handleClick,
     modifier,
+    children
 }) => {
     return (
         <span
@@ -18,6 +19,7 @@ const IconButton: React.FC<IconButtonProps> = ({
             className={customModifier('a-iconbutton', modifier!)}
         >
             <Icon modifier={icon} />
+            {children}
         </span>
     );
 };
